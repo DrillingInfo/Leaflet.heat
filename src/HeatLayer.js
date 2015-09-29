@@ -187,7 +187,7 @@ L.HeatLayer = (L.Layer ? L.Layer : L.Class).extend({
 
     _animateZoom: function (e) {
         var scale = this._map.getZoomScale(e.zoom),
-            offset = this._map._getCenterOffset(e.center)._multiplyBy(-scale).subtract(this._map._getMapPanePos());
+            offset = this._map._latLngToNewLayerPoint(this._map.getBounds().getNorthWest(), e.zoom, e.center);
 
         if (L.DomUtil.setTransform) {
            L.DomUtil.setTransform(this._canvas, offset, scale);
