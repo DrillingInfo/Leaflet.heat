@@ -72,6 +72,11 @@ L.HeatLayer = (L.Layer ? L.Layer : L.Class).extend({
         map.addLayer(this);
         return this;
     },
+    
+    // Added by DrillingInfo dev team
+    setOpacity: function (esOpacity) {
+        this._canvas.style['opacity'] = esOpacity;
+    },    
 
     _initCanvas: function () {
         var canvas = this._canvas = L.DomUtil.create('canvas', 'leaflet-heatmap-layer leaflet-layer');
