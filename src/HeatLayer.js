@@ -78,8 +78,8 @@ L.HeatLayer = (L.Layer ? L.Layer : L.Class).extend({
     },
 
     // Added by DrillingInfo dev team
-    setOpacity: function (esOpacity) {
-        this._canvas.style['opacity'] = esOpacity;
+    setOpacity: function (opacity) {
+        this._canvas.style['opacity'] = opacity;
     },
 
     _initCanvas: function () {
