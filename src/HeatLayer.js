@@ -73,6 +73,11 @@ L.HeatLayer = (L.Layer ? L.Layer : L.Class).extend({
         return this;
     },
 
+    // Added by Phoenix dev team
+    setOpacity: function (opacity) {
+        this._canvas.style['opacity'] = opacity;
+    },    
+
     _initCanvas: function () {
         var canvas = this._canvas = L.DomUtil.create('canvas', 'leaflet-heatmap-layer leaflet-layer');
 
